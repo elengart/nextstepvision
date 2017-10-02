@@ -1,0 +1,113 @@
+<!--- 
+animation to synchronize breathing 
+todo: breathingInstr animation (text) doesn't work in safari, even if i add -webkit-keyframes...
+-->
+<style>
+        @keyframes breathing {
+            0% {
+                background-color: lightblue;
+                transform: scale(1);
+            }
+            25% {
+                background-color: blue;
+                transform: scale(3);
+            }
+            50% {
+                background-color: lightgreen;
+                transform: scale(3);
+            }
+            86% {
+                background-color: lightblue;
+                transform: scale(1);
+            }
+            100% {
+                background-color: lightblue;
+                transform: scale(1);
+            }        
+        }
+
+ @-webkit-keyframes breathing {
+            0% {
+                background-color: lightblue;
+                transform: scale(1);
+            }
+            25% {
+                background-color: blue;
+                transform: scale(3);
+            }
+            50% {
+                background-color: lightgreen;
+                transform: scale(3);
+            }
+            86% {
+                background-color: lightblue;
+                transform: scale(1);
+            }
+            100% {
+                background-color: lightblue;
+                transform: scale(1);
+            }        
+        }
+        
+        
+        @keyframes breathingInstr {
+            0% {
+                content: "inhale";
+            }
+            25% {
+                content: "hold";
+            }
+            50% {
+                content: "exhale";
+            }
+            86% {
+               content: "";
+            }
+            100% {
+               content: "inhale";
+            }        
+        }
+        
+        @-webkit-keyframes breathingInstr {
+            0% {
+                content: "inhale";
+            }
+            25% {
+                content: "hold";
+            }
+            50% {
+                content: "exhale";
+            }
+            86% {
+               content: "";
+            }
+            100% {
+               content: "inhale";
+            }        
+        
+        #shape {
+            position: relative;
+            margin: 6em auto;
+            width:  5em;
+            height: 5em;
+            border-radius: 50%;
+            animation: breathing 20s linear infinite;
+        }
+        
+        
+        #shape:before {
+            display: block;
+            color: white;
+            content: "";
+            position: absolute;
+            top: 50%;
+            margin-top: -1em;
+            width: 5em;
+            height: 2em;    
+            line-height: 2em;
+            text-align: center;
+            animation: breathingInstr 20s step-end infinite;
+        }
+    </style>
+    <div id="shape">     
+    </div>
