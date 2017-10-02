@@ -1,0 +1,35 @@
+<script>
+
+jQuery(document).ready(function(){
+    jQuery('.smooth-scroll, #focus .service-icon a').bind('click',function () {
+        var headerHeight;
+        var hash    = this.hash;
+        var idName  = hash.substring(1);    // get id name
+        var alink   = this;                 // this button pressed
+        
+        // check if there is a section that had same id as the button pressed
+        if ( jQuery('section [id*=' + idName + ']').length > 0 && jQuery(window).width() >= 751 ){
+            jQuery('#site-navigation .current').removeClass('current');
+            jQuery(alink).parent('li').addClass('current');
+        } else {
+            jQuery('#site-navigation .current').removeClass('current');
+        }
+        if ( jQuery(window).width() >= 751 ) {
+            headerHeight = jQuery('#main-nav').height();
+        } else {
+            headerHeight = 0;
+        }
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = jQuery(this.hash);
+            target = target.length ? target : jQuery('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+                jQuery('html,body').animate({
+                    scrollTop: target.offset().top - headerHeight + 10
+                }, 1200);
+                return false; 
+            }
+        }
+    });
+});
+
+</script>
