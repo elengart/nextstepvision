@@ -1,0 +1,192 @@
+
+@font-face {
+    font-family: 'aileronregular';  
+    src: url('/wp-content/uploads/nsvfonts/aileron_regular_macroman/Aileron-Regular-webfont.woff') format('woff');
+
+}
+
+@font-face {
+    font-family: 'aileronbold';  
+    src: url('/wp-content/uploads/nsvfonts/aileron_bold_macroman/Aileron-Bold-webfont.woff') format('woff');
+
+}
+
+@font-face {
+    font-family: 'aileronblack'; 
+    src: url('/wp-content/uploads/nsvfonts/aileron_black_macroman/Aileron-Black-webfont.woff') format('woff');
+
+}
+
+h1,h2 {
+	font-family: 'aileronblack', 'Montserrat', Helvetica, sans-serif;
+}
+
+.home h1, .home h2 {
+
+	word-spacing: 8px;
+	letter-spacing: 2px;
+}
+
+
+@keyframes flap {
+	0% {
+		transform: perspective(500px) scaleX(1.2) scaleY(1.2);
+	}
+	50% {
+transform: perspective(100px) scaleX(0.8) scaleY(1.2) rotateX(-20deg);
+	}
+	100% {
+		transform: perspective(500px) scaleX(1.2) scaleY(1.2);
+	}
+}
+
+@-webkit-keyframes flap {
+	0% {
+		transform: perspective(500px) scaleX(1.2) scaleY(1.2);
+	}
+	50% {
+transform: perspective(100px) scaleX(0.8) scaleY(1.2) rotateX(-20deg);
+	}
+	100% {
+		transform: perspective(500px) scaleX(1.2) scaleY(1.2);
+	}
+}
+
+
+/* header */
+.navbar.navbar-inverse .nav.navbar-nav a:hover, .navbar.navbar-inverse .nav.navbar-nav > li > a:hover {
+	color: #ca385f;
+}
+
+/* focus section */
+.focus {
+background: linear-gradient(180deg,rgba(56,168,202, 0.8) 0%, rgba(56,95,202, 1) 100%) !important;
+}
+
+.focus-buttons {
+	margin-bottom: 40px;
+}
+
+.focus-buttons a {
+	color: #fff !important;
+	background: #ca385f;
+	padding: 10px 30px;
+	border-radius: 5px;
+	display: inline-block;
+	font-size: 0.8em;
+	text-transform: uppercase;
+}
+
+.focus-buttons a:hover {
+	background: #df889f;
+}
+
+.focus-box .service-icon {
+	border-width: 5px;
+	border-radius: 5px;
+	border-top-right-radius: 20%;
+}
+
+.focus-box .service-icon:hover,
+.focus-box .service-icon:focus  {
+	border-width: 5px !important;
+}
+
+.focus-box .service-icon .pixeden {
+	background-size: 85% 85% !important;
+}
+
+.service-icon:hover .pixeden{
+	animation: flap 1.5s infinite;    
+}
+
+/* about coach section */
+.big-intro {
+	padding: 0 20px;
+}
+
+.big-intro figcaption {
+	float: left;
+	margin-bottom: 10px
+}
+
+.big-intro figure img{
+	border: 5px solid #fff;
+	border-radius: 8px;
+	border-top-right-radius: 50px;
+	
+}
+.zerif_about_us_center p{
+	font-size:  1.2em;
+}
+
+#coach-credentials a:link, #coach-credentials a:visited {
+  color: #CA385f;
+}
+
+#coach-credentials a:hover, #coach-credentials a:focus {
+  color: #DF889F;
+}
+
+.program-box {
+	margin-top: 10px;
+}
+.program-box-content {
+	background: #fff;
+    padding: 20px 30px;
+	border-radius: 5px;
+}
+.program-box-content p,
+.program-box-content ul{
+  text-align: left;
+}
+
+/* media queries */
+@media (max-width: 600px) {
+     .discovery-session-book-button {
+		width: 100%;
+		text-align: center;
+  }
+  .discovery-session-coach {
+    display: block;
+    position: relative;
+	margin-left: auto;
+	margin-right: auto;
+    float: none;
+  }
+}
+@media (max-width: 767px) {
+  .navbar-brand > a > img {
+	max-height: 60%;
+  }
+  .packages .container {
+	padding-left: 0;
+	padding-right: 0;
+  }
+   .program-box {
+	   padding-left: 0;
+		padding-right: 0;
+   }
+  .program-box-content {
+	border-radius: 0;
+    padding: 20px;
+  }  
+}
+
+/* template tweaks*/
+
+@media (min-width: 992px) {
+	.section-header {
+      padding-bottom:45px;
+	}
+    .about-title-hi {
+	text-align: left; 
+	margin-top: -40px;
+  }
+	.program-box:first-child {
+		padding-right: 10px;	
+	}
+    .program-box:last-child {
+	  padding-left: 10px;	
+	}
+}
